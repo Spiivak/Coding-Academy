@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+:root {
+	--primary-bgc: #0d1224;
+	--second-bgc: #11152c;
+
+	--primary-txtc: #d9d9d9;
+
+	--pink: #f926ae;
+	--yellow: #f7cb4e;
+	--orange: #ff9f24;
+	--green: #16f8b6;
+	--lightblue: #14d5fe;
+	--gray: #666d85;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+
+	background-color: var(--primary-bgc);
+}
+
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+
+	padding: 24px 64px;
+	height: 65px;
+	/* background-color: red; */
+}
+
+.logo {
+	height: 65px;
+	display: flex;
+	/* justify-content: center; */
+	/* align-items: center; */
+	align-self: center;
+}
+
+.links {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 32px;
+}
+
+.links a {
+	color: var(--primary-txtc);
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.links a:hover {
+	color: white;
+}
+
+.social-media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.instagram,
+.twitter,
+.facebook {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	background-color: transparent;
+	border-radius: 50%;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.instagram:hover {
+	background: linear-gradient(
+		to bottom right,
+		#feda75,
+		#fa7e1e,
+		#d62976,
+		#962fbf,
+		#4f5bd5
+	);
+	transform: scale(1.1);
+}
+
+.twitter:hover {
+	background-color: #1da1f2;
+	transform: scale(1.1);
+}
+
+.facebook:hover {
+	background-color: #1877f2;
+	transform: scale(1.1);
+}
+
+.code-block {
+	background-color: var(--second-bgc);
+	color: white;
+	width: 586px;
+	height: 428px;
+
+	display: flex;
+	flex-direction: column;
+	margin: 64px 64px;
+}
+.code {
+	border-radius: 0px 0px 8px 8px;
+	border-right: 1px solid rgba(64, 64, 64, 0.5);
+	border-bottom: 1px solid rgba(64, 64, 64, 0.5);
+	border-left: 1px solid rgba(64, 64, 64, 0.5);
+
+	padding: 32px 64px;
+	height: 376px;
+}
+
+.demo-actions {
+	background-color: var(--second-bgc);
+	height: 52px;
+	border-radius: 8px 8px 0px 0px;
+	border-top: 1px solid rgba(64, 64, 64, 0.5);
+
+	border-right: 1px solid rgba(64, 64, 64, 0.5);
+
+	border-left: 1px solid rgba(64, 64, 64, 0.5);
+
+	background: #11152c;
+
+	box-shadow: 0px -4px 4px 0px rgba(130, 68, 255, 0.1);
+	padding: 20px 32px;
+	display: flex;
+	gap: 8px;
+}
+
+.circle {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+}
+
+.circle1 {
+	background-color: #ed6a5e;
+}
+.circle2 {
+	background-color: #ff9f24;
+}
+.circle3 {
+	background-color: #8eeac1;
+}
