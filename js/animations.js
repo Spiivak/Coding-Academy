@@ -1,23 +1,3 @@
-'use strict'
-
-function onInit() {
-    displayCodeWord()
-    var interval = 0
-    interval = setInterval(() => {
-        clearTimeout(timer1)
-        clearTimeout(timer2)
-        clearTimeout(timer3)
-        timer1 = 0
-        timer2 = 0
-        timer3 = 0
-        displayCodeWord()
-    }, 20000);
-}
-
-
-
-
-
 const codeLines = `
 <pre>
 <span style="color: var(--pink);">const</span> coder <span style="color: var(--pink);">=</span> <span style="color: var(--gray)">{</span>
@@ -50,7 +30,7 @@ function displayCodeWord() {
             if (i % 2 === 0) currString = currString + '|'
             document.querySelector('.typing-container').innerHTML = currString
             if (i % 2 === 0) currString = currString.substring(0, currString.length - 1)
-        }, 10 * i);
+        }, 5 * i);
         timer2 = setTimeout(() => {
             document.querySelector('.typing-container').innerHTML = codeLines
         }, 10 * codeLines.length);
@@ -67,10 +47,22 @@ function clearCodeWord() {
     for (let i = 0; i < codeLines.length; i++) {
         timer3 = setTimeout(() => {
             document.querySelector('.typing-container').innerHTML = currString
-            currString = currString.substring(0, currString.length - 3)
+            currString = currString.substring(0, currString.length - 5)
             document.querySelector('.typing-container').innerHTML = currString
-        }, 20 * (i + 500));
+        }, 10 * i);
 
     }
 }
+
+displayCodeWord()
+var interval = 0
+interval = setInterval(() => {
+    clearTimeout(timer1)
+    clearTimeout(timer2)
+    clearTimeout(timer3)
+    timer1 = 0
+    timer2 = 0
+    timer3 = 0
+    displayCodeWord()
+}, 40_000);
 
